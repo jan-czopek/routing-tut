@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jan-czopek/routing-tut/static/css/main.4ab54d94.css",
+    "main.js": "/jan-czopek/routing-tut/static/js/main.517adf9c.js",
+    "index.html": "/jan-czopek/routing-tut/index.html",
+    "main.4ab54d94.css.map": "/jan-czopek/routing-tut/static/css/main.4ab54d94.css.map",
+    "main.517adf9c.js.map": "/jan-czopek/routing-tut/static/js/main.517adf9c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4ab54d94.css",
+    "static/js/main.517adf9c.js"
+  ]
+}

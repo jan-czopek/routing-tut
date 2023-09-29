@@ -34,7 +34,7 @@ function App() {
         <Route path="/edit/:id" component={EditPost} />
         <Route path="/post/:id" component={PostPage} />
         <Route path="/about" component={About} />
-        <Route path="*" component={Missing} />
+        {/* <Route path="*" component={Missing} /> */}
       </Switch>
       <Footer />
     </div>

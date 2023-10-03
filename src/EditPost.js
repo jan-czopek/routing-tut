@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import { format } from 'date-fns';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 
 const EditPost = () => {
@@ -25,8 +24,7 @@ const EditPost = () => {
   }, [post, setEditTitle, setEditBody]);
 
   const handleEdit = (id) => {
-    const datetime = format(new Date(), 'MMMM dd, yyyy pp');
-    const updatedPost = { id, title: editTitle, datetime, body: editBody };
+    const updatedPost = { id, title: editTitle, body: editBody };
     editPost(updatedPost);
     history.push(`/post/${id}`);
   }

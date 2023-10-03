@@ -1,5 +1,4 @@
 import { useHistory } from 'react-router-dom';
-import { format } from 'date-fns';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 
 const NewPost = () => {
@@ -15,9 +14,7 @@ const NewPost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
-    const datetime = format(new Date(), 'MMMM dd, yyyy pp');
-    const newPost = { id, title: postTitle, datetime, body: postBody };
+    const newPost = { title: postTitle, body: postBody };
     savePost(newPost);
     history.push('/');
   }

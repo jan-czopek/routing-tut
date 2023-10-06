@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { StoreProvider } from 'easy-peasy';
-import store from './store';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { store } from './app/store'
+import { Provider } from 'react-redux';
+
+
+// import { StoreProvider } from 'easy-peasy';
+// import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StoreProvider store={store}>
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
-  </StoreProvider>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/*" element={<App />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );
